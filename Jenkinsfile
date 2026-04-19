@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/TU_USUARIO/mi-repositorio-devops.git'
+                git branch: 'main', url: 'https://github.com/MezGAM/mi-repositorio-devops.git'
             }
         }
 
