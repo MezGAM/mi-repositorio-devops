@@ -10,20 +10,20 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t mi-app-flask ./app'
+                bat 'docker build -t mi-app-flask ./app'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'echo "No hay tests por ahora"'
+                bat 'echo No hay tests por ahora'
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'docker compose down || true'
-                sh 'docker compose up -d --build'
+                bat 'docker compose down || exit 0'
+                bat 'docker compose up -d --build'
             }
         }
     }
